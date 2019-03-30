@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <meta name="renderer" content="webkit">
+                <title>Register</title>
+                <!--
+                    <link href="css/style.css" rel='stylesheet' type='text/css' />
+                -->
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta name="keywords" content="teachers,tree,Login ,Sign up ,Registration "./>
+                <meta name="description" content="this is teached-tree system login performence">
+                <meta name="robots" content="none">
+                <!-- mobile devices surport-->
+                <meta name="format-detection" content="telephone=no">
+                <meta name="format-detection" content="email=no">
+                <meta name="handheldfriendly" content="true">
+                <!--per 300 seconds refresh the web-->
+                <meta http-equiv="refresh" content="300">
+                <link href="../static/css/regist.css" rel="stylesheet">
+               <!-- <script type="text/java script" src="../static/js/register.js"></script>-->
+        </head>
+        <body>
+            <div id="registerCenter">
+                <div>
+                <h1><strong><big><span>欢迎来到注册界面</span></big></strong></h1>
+                </div>
+            <div>
+                <form method="POST"><!--there will be default until back-end is success-->
+                {{ form.csrf_token }}
+                <p class="green"><label>密码: <input name="password" type="password"></label> </p>
+                {% if form.password.errors %}
+                    {% for message in form.password.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+                {% endif %}
+
+                <p class="red"><label>姓名: <input name="name" type="text"></label> </p>
+                {% if form.name.errors %}
+                    {% for message in form.name.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+                {% endif %}
+
+                <p>
+                    <label class="sex-choose" for="sex"><span>性别:</span></label>
+                    <select name="sex">
+                        <option value='男'>男
+                        <option value='女'>女
+                    </select>
+                </p>
+
+                {{  form.data }}
+                {{  form.errors }}
+
+                <p class="yellow"><label><span>身份证号: </span><input name="idcard" aria-label ="IdentifyNumber" type="text"></label> </p>
+                {% if form.idcard.errors %}
+                    {% for message in form.idcard.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+                {% endif %}
+
+                <p class="blue"><label>手机号: <input name="phonenumber" type="tel"  aria-label ="your PhoneNumber"></label> </p>
+                {% if form.phonenumber.errors %}
+                    {% for message in form.phonenumber.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+                {% endif %}
+
+                <p class="purple"><label>邮件地址: <input name="email" type="email" aria-label ="your email"></label> </p>
+                
+                
+                <div class="submit"><input type="submit" name="submit" onclick="myFunction()" value="注册" ></div>
+                {% for message in get_flashed_messages() %}
+                    {{ messages }}
+                {% endfor %}
+                    
+            </form>
+            <!-- there should be wirtten a button.if checkbox is checked,button  will be valid,or invalid-->
+            
+           
+            <noscript>
+
+                <p><strong>本页面需要浏览器支持（启用）javascript脚本。</strong></p>
+                
+            </nosript>
+        </body>
+</html>

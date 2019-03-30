@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<title>Login</title>
+<link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="teachers,tree,Login ,Sign up ,Registration "./>
+<meta name="description" content="this is teached-tree system login performence">
+<meta name="robots" content="none">
+<!-- mobile devices surport-->
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="handheldfriendly" content="true">
+<!--per 300 seconds refresh the web-->
+<meta http-equiv="refresh" content="300">
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<!--webfonts-->
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<!--//webfonts-->
+</head>
+<body>
+	<h1>欢迎使用师承树系统</h1>
+		<div class="app-location">
+			<h2>登录</h2>
+			<div class="line"><span></span></div>
+			<div class="location"><img src="../static/trees.ico" class="img-responsive" alt="" ></div>
+			<form method="post">
+				{{ form.csrf_token }}
+				{% for message in get_flashed_messages() %}
+					<div class="alert">{{ message }}</div>
+				{% endfor %}
+				{{ form.errors }}
+				<!--{% if form.account.errors %}
+                    {% for message in form.account.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+				{% endif %}
+				{% if form.password.errors %}
+                    {% for message in form.password.errors %}
+                        <small class="error">提示:{{ message }}</small><br>
+                    {% endfor %}
+				{% endif %}-->
+				<input type="text" class="text" value="Account" name="account" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Account';}" >
+				<input type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+				<div class="submit"><input type="submit" name="submit" onclick="myFunction()" value="登录" ></div>
+				<div class="clear"></div>
+				<div class="new">
+					<h3><a href="forget-password.html" name="forget">忘记密码</a></h3>
+					<h4><a href="regist.html" name="regist">注册</a></h4>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+</body>
+</html>

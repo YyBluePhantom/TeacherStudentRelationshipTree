@@ -1,0 +1,78 @@
+@charset "UTF-8";
+html,body{
+    background: url(background1.jpg) ;
+    height:100%;
+
+}   
+body{
+    background:url(background1.jpg)center center;
+    background-size: cover;
+}
+h1{
+    
+    color: brown;
+}
+p.red{
+   
+    color:red;
+}
+p.yellow{
+   
+    color:orange;
+}
+p.blue{
+   
+    color:blue;
+}
+p.green{
+   
+    color:green;
+}
+p.purple{
+   
+   color:purple;
+}
+label.checkbox{
+    color:springgreen;
+}
+label.country-choose{
+   color:steelblue;
+}
+legend.SEX{
+   color:tomato;
+}
+.input{
+  /*  border-style: solid;
+    border-width: 1000 px;*/
+    border: 20px solid #000;
+}
+#selectsex{
+    color: coral;
+}
+#registerCenter{
+    position: relative;
+    margin: 0 auto;
+    text-align: center ;
+   
+}
+input[type="submit"]{
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    padding: 17px 15px;
+    width:10em;
+    border:3px solid #0bd38a;
+    background: #0bd38a;
+    border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+  }
+  input[type="submit"]:hover{
+    background:none;
+    border: 3px solid #0bd38a;
+    color: #0bd38a;
+  
+  }
