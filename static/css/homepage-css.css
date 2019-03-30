@@ -1,0 +1,244 @@
+/*@charset "utf-8";
+html,body{
+    background: url(background1.jpg) no-repeat;
+    height:100%;
+}   body{
+    background:url(background1.jpg)center center;
+    background-size: cover;
+    position: relative;
+}
+    h1{
+        margin: 0;
+        color:gold;
+        text-transform:uppercase;
+        font-size: 4em;
+        background:gray;
+        line-height: 1em;
+        text-align: center;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    
+    p.tip{
+        color:#f81111;
+    }
+    li:first-child{
+        color: red;
+        text-transform: uppercase;
+    }
+    li:nth-child(2){
+        color:yellow;
+        text-transform: uppercase;
+    }
+    li:nth-child(3){
+        color:blue;
+        text-transform: uppercase;
+    }
+    li:last-child{
+        color:green;
+        text-transform: uppercase;
+        clear: right;
+    }
+    /*span.red{
+        color:red;
+        
+    }
+    
+    span.yellow{
+        color:yellow;
+        text-transform: uppercase;
+    }
+    span.blue{
+        color:blue;
+        text-transform: uppercase;
+    }
+    span.green{
+        
+    }
+    
+    ul{
+        border: 5px solid #fff;
+        margin: 0;
+        padding: 0;
+        
+    }
+    li:hover{
+        background-color: black;
+    }
+    li{
+        border: solid white 10px;
+        margin-right: 10px;
+        list-style: none;
+        padding: 15px;
+        margin: 5px 0;
+        text-indent: 35px;
+        background: url(timg2.jpg) no-repeat 10px 50%;
+        float: left;
+    }
+    #leftSection , #rightSection{
+        float:left;/*If there is very little space above a row for floating elements, 
+        the element jumps to the next row, and the process continues until a row has enough space.
+        width:38em;
+        height:33em;
+       
+
+       ;/*  clear:both 
+    }
+    #leftSection  h2, #rightSection h2{
+        width: 32.5em;
+        
+    }
+    section{
+        border: 5px solid #fff;
+    }
+    aside{
+        border:  solid white;
+        border-width: 5px 5px 5px 5px;
+        height: 33em;
+        float: right;
+        
+    }
+    #bottom{
+        position: relative;
+        
+    }
+    #copyright{
+       
+        
+        float: left;
+        position: absolute;
+        width: 94em;
+        
+    }
+    #copyrightWords{ 
+        text-transform: uppercase;
+        text-align: center;
+        background:lightblue;
+        padding: 5px;
+        display: block;
+    }
+
+    th{
+        position: absolute;
+        font-size:1.5em;
+        color:blue;
+        
+    }*/
+    @charset "utf-8";
+    html,body{
+    background: url(background1.jpg) no-repeat;
+    height:100%;
+}   body{
+    background:url(background1.jpg)center center;
+    background-size: cover;
+    position: relative;
+}
+    ul{
+        border: 5px solid #fff;
+        margin: 0;
+        padding: 0;
+        
+    }
+    li:hover{
+        background-color: lightblue;
+    }
+    li{
+        width:21.5%;
+        border: solid white 10px;
+        margin-right: 10px;
+        list-style: none;
+        padding: 15px;
+        margin: 5px 0;
+        text-indent: 35px;
+        background: url(timg2.jpg) no-repeat 10px 50%;
+        float: left;
+    }
+        li:first-child{
+            color: red;
+            text-transform: uppercase;
+        }
+        li:nth-child(2){
+            color:yellow;
+            text-transform: uppercase;
+        }
+        li:nth-child(3){
+            color:blue;
+            text-transform: uppercase;
+        }
+        li:last-child{
+            color:green;
+            text-transform: uppercase;
+            clear: right;
+        }
+    h1{
+        margin: 0;
+        color:gold;
+        text-transform:uppercase;
+        font-size: 4em;
+        background:gray;
+        line-height: 1em;
+        text-align: center;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    
+    p.tip{
+        color:#f81111;
+    }
+    span.red{
+        color:red;
+    }
+    span.yellow{
+        color:yellow;
+    }
+    span.blue{
+        color:blue;
+    }
+    span.green{
+        color:green;
+    }
+    ul{
+        border: 5px solid #fff;
+    }
+    #leftSection , #rightSection{
+        float:left;/*If there is very little space above a row for floating elements, 
+        the element jumps to the next row, and the process continues until a row has enough space.*/
+        width:38em;
+        height:33em;
+       ;/*  clear:both */
+    }
+    #leftSection  h2, #rightSection h2{
+        width: 32.5em;
+        
+    }
+    section{
+        border: 5px solid #fff;
+    }
+    aside{
+        border:  solid white;
+        border-width: 5px 5px 5px 5px;
+        height: 39em;
+        text-align: center;
+        
+        
+    }
+    #bottom{
+        position: relative;
+        
+    }
+    #copyright{
+        
+      float:left;
+        position: absolute;
+        width: 94em;
+        
+    }
+    #copyrightWords{
+        text-transform: uppercase;
+        
+        text-align: center;
+        background:lightblue;
+        padding: 5px;
+    }
