@@ -42,7 +42,7 @@
                         <small class="error">提示:{{ message }}</small><br>
                     {% endfor %}
                 {% endif %}
-
+                {{ count }}
                 <p>
                     <label class="sex-choose" for="sex"><span>性别:</span></label>
                     <select name="sex">
@@ -50,9 +50,6 @@
                         <option value='女'>女
                     </select>
                 </p>
-
-                {{  form.data }}
-                {{  form.errors }}
 
                 <p class="yellow"><label><span>身份证号: </span><input name="idcard" aria-label ="IdentifyNumber" type="text"></label> </p>
                 {% if form.idcard.errors %}
@@ -72,7 +69,7 @@
                 
                 
                 <div class="submit"><input type="submit" name="submit" onclick="myFunction()" value="注册" ></div>
-                {% for message in get_flashed_messages() %}
+                {% for messages in get_flashed_messages() %}
                     {{ messages }}
                 {% endfor %}
                     

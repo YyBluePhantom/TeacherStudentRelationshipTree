@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
 <meta charset="utf-8">
 <meta name="renderer" content="webkit">
@@ -12,6 +13,7 @@
 <meta name="keywords" content="teachers,tree,Login ,Sign up ,Registration "./>
 <meta name="description" content="this is teached-tree system login performence">
 <meta name="robots" content="none">
+
 <!-- mobile devices surport-->
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="email=no">
@@ -20,36 +22,49 @@
 <meta http-equiv="refresh" content="300">
 <link href="../static/css/homepage-css.css" rel="stylesheet">
 
+        
+<script src="../static/js/homepage.js"></script>
+ 
 </head>
-<body>
+<body id="body1">
     <header>
         <h1><strong><!--<big>teach-tree system</big>-->teach-tree system </strong></h1>
+         <div id="toptop">
+         <form id="log" method="POST">
+        
+           {% if current_user.is_authenticated %} 　　
+           　
+            <input type="submit" name="submit" onclick="myFunction()" value="Logout">
+            　{% else %}
+       　   <input type="submit" name="submit" onclick="transform(5)" value="Login">
+            {% endif %} 
+            
+           <!--<input type="submit" name="submit" onclick="transform(5)" value="Login">-->
+         </form>
+    </div>
+   
+        
         <nav>
                 <ul  role="menuitem" class="ul1">
                     <!--using role can help low vision people to use this website-->
-                        <li role="menuitem"><span class="red"><font size="6">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspinsert&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></span> </li>
-                        <li role="menuitem"><span class="yellow"><font size="6">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdelete&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></span></li>
-                        <li role="menuitem"><span class="blue"><font size="6">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspupdate&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</font></span></li>
-                        <li role="menuitem"><span class="green"><font size="6">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspselect&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </font></span></li>
+                        <li role="menuitem" onclick="transform(1)"><span class="red">insert</span> </li>
+                        <li role="menuitem" onclick="transform(2)"><span class="yellow">delete</span></li>
+                        <li role="menuitem" onclick="transform(3)"><span class="blue">update</span></li>
+                        <li role="menuitem" onclick="transform(4)"><span class="green">select </span></li>
         </nav>  
     </header>
     <!-- i think we can devide two section.one is for display teached-tree and the other is
     for insert ,delete,update,select -->
     <section id="leftSection">
-        <h2>maintain your tree</h2>
-        <!-- there should be a empty field to show the operating results -->
-        <table>
-            <!--<caption>Teacher-Information-Table</caption>-->
-            <thead>
-                <tr>
-                    <th>
-                        Teachers
-                    </th>
-                </tr>
-            </thead>
+       
+            
+            
         
-        <tobody>
-            <tr>
+        <h2>Teacher Tree</h2>
+        <!-- there should be a empty field to show the operating results -->
+        <table id="teacherTreeTable">
+            <!--<caption>Teacher-Information-Table</caption>-->
+            <!-- <tr>
                 <td>
                     a
                 </td>
@@ -63,25 +78,35 @@
                 <td>
                    c 
                 </td>
-            </tr>
+            </tr>-->
+            
+            <thead>
+                <tr>
+                    <th>
+                        Teachers
+                    </th>
+                </tr>
+            </thead>
+            
+        <tobody>
+           {% for teacher in teachers %}
+                <tr><td>{{ teacher.name }}+"--"+{{ teacher.start_time }}+"to"+{{ teacher.end_time }}</td></tr>
+            {%endfor%}
+
+            {% for message in get_flashed_messages() %}
+                    {{ messages }}
+           {% endfor %}
+
+            {{ count }}
         </tobody>
        </table>
     </section>
     <section id="rightSection">
-        <h2>the current teached-tree</h2>
+        <h2>Student Tree</h2>
         <!-- there should be a field to show the current tree-->
-            <table>
+            <table id="studentTreeTable">
                <!--<Caption>Students Information Table</Caption>--> 
-                <thead>
-                    <tr>
-                        <th>
-                            Students
-                        </th>
-                    </tr>
-                </thead>
-            
-            <tobody>
-                <tr>
+               <!--<tr>
                     <td>
                         d
                     </td>
@@ -95,21 +120,53 @@
                     <td>
                         f
                     </td>
-                </tr>
+                </tr>-->
+                <thead>
+                    <tr>
+                        <th>
+                            Students
+                        </th>
+                    </tr>
+                </thead>
+            
+            <tobody>
+                {%for student in students%}
+                    <tr><td>{{ student.name }}"--"+{{ student.start_time }}+"to"+{{ student.end_time }}</td></tr>
+                {%endfor%}
             </tobody>
         </table>
     </section>
+    <!--<div id="clear">
+
+    </div>-->
     <aside>
-        <h4>how to use the system</h4>
+      
         <article>
             
             <!-- if readme file or words too large,open a new web-->
             <p class="tip">
-                    <span class="red">discription file or words</span> 
+                <br>
+                    <h4><span class="red">The System Using Tips</span></h4>
+                    <span class="red">Thanks for using our work.</span>
+                    <span class="red">If you want to accomplish</span>
+                    <span class="blue">to add, delete, update, </span>
+                    <span class="blue">or select your teacher or</span>
+                    <span class="yellow">student,please click cor-</span>
+                    <span class="yellow">resopnding button at the </span>
+                    <span class="red">top.If you want to know </span>
+                    <span class="red">more detailed info about</span>
+                    <span class="blue">above mentioned,please </span>
+                    <span class="blue">please click the READ ME</span>
+                    <span class="yellow">button at the bottom. </span>
+                    <span class="yellow">Thank you for your using</span>
+                    <span class="green">again. It's our pleasure </span>
+                    <span class="green">if you can reconmmend this</span>
+                    <span class="green">to your friends! </span>
+
             </p>
-            <header><a href="README.html" target="_blank">README</a></header>
+            <header ><a  href="README.html" target="_blank"><div id="readme">README</div></a></header>
             <footer>
-                <p>article published time:<time datetime="2019-03-14">2019.3.14</time></p>
+                <p ><div id="time">published time:</div><time datetime="2019-03-14"><div id="time1">2019.3.14</div></time></p>
                 
             </footer>
         </article>

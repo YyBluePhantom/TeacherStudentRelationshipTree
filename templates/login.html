@@ -33,20 +33,19 @@
 				{{ form.csrf_token }}
 				{% for message in get_flashed_messages() %}
 					<div class="alert">{{ message }}</div>
-				{% endfor %}
-				{{ form.errors }}
-				<!--{% if form.account.errors %}
+				{% endfor %}	
+				<input type="text" class="text" value="Account" name="account" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Account';}" >
+				{% if form.account.errors %}
                     {% for message in form.account.errors %}
                         <small class="error">提示:{{ message }}</small><br>
                     {% endfor %}
 				{% endif %}
+				<input type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
 				{% if form.password.errors %}
                     {% for message in form.password.errors %}
                         <small class="error">提示:{{ message }}</small><br>
                     {% endfor %}
-				{% endif %}-->
-				<input type="text" class="text" value="Account" name="account" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Account';}" >
-				<input type="password" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+				{% endif %}
 				<div class="submit"><input type="submit" name="submit" onclick="myFunction()" value="登录" ></div>
 				<div class="clear"></div>
 				<div class="new">
