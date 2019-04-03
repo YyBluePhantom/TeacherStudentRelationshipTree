@@ -34,8 +34,8 @@ login_manager.login_message = u"请先登录"
 # 如果用户未登录，current_user默认会返回Flask-Login内置的AnonymousUserMixin类对象，它的is_authenticated和is_active属性会返回False，而is_anonymous属性则返回True。
 
 
-# csrf=CSRFProtect()
-# csrf.init_app(app)
+csrf=CSRFProtect()
+csrf.init_app(app)
 
 
 # 既能够充当数据库进行,query查询;    也能够创建当前登录对象;

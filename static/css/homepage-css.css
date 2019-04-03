@@ -129,23 +129,33 @@ html,body{
     html,body{
     background: url(background1.jpg) no-repeat;
     height:100%;
+<<<<<<< HEAD
    
+=======
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
 }   body{
     background:url(background1.jpg)center center;
     background-size: cover;
     position: relative;
 }
     ul{
+<<<<<<< HEAD
         border: 0.5% solid #fff;
         margin: 0;
         padding: 0;
         text-align: center;
+=======
+        border: 5px solid #fff;
+        margin: 0;
+        padding: 0;
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
         
     }
     li:hover{
         background-color: lightblue;
     }
     li{
+<<<<<<< HEAD
         font-size:200%;
         width:22.7%;
         border: solid white 2%;
@@ -155,6 +165,16 @@ html,body{
         margin: 0.3% 0;
         text-indent: 1%;
         background: url(timg2.jpg) no-repeat 0.1% 50%;
+=======
+        width:21.5%;
+        border: solid white 10px;
+        margin-right: 10px;
+        list-style: none;
+        padding: 15px;
+        margin: 5px 0;
+        text-indent: 35px;
+        background: url(timg2.jpg) no-repeat 10px 50%;
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
         float: left;
     }
         li:first-child{
@@ -174,6 +194,7 @@ html,body{
             text-transform: uppercase;
             clear: right;
         }
+<<<<<<< HEAD
        #toptop{
           width: 10%;
           float: left;
@@ -189,6 +210,15 @@ html,body{
         font-size: 400%;
         background:gray;
         line-height: 100%;
+=======
+    h1{
+        margin: 0;
+        color:gold;
+        text-transform:uppercase;
+        font-size: 4em;
+        background:gray;
+        line-height: 1em;
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
         text-align: center;
     }
     h2{
@@ -216,10 +246,16 @@ html,body{
     #leftSection , #rightSection{
         float:left;/*If there is very little space above a row for floating elements, 
         the element jumps to the next row, and the process continues until a row has enough space.*/
+<<<<<<< HEAD
         width:43%;
         height: 75%;
        /* text-align: center;*/
        /*  clear:both */
+=======
+        width:38em;
+        height:33em;
+       ;/*  clear:both */
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
     }
     #leftSection  h2, #rightSection h2{
         width: 32.5em;
@@ -230,12 +266,20 @@ html,body{
     }
     aside{
         border:  solid white;
+<<<<<<< HEAD
         border-width: 1px 1px 1px 1px;
         height:97%;
         text-align: center;
         
         
       
+=======
+        border-width: 5px 5px 5px 5px;
+        height: 39em;
+        text-align: center;
+        
+        
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
     }
     #bottom{
         position: relative;
@@ -245,11 +289,16 @@ html,body{
         
       float:left;
         position: absolute;
+<<<<<<< HEAD
         width: 94%;
+=======
+        width: 94em;
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
         
     }
     #copyrightWords{
         text-transform: uppercase;
+<<<<<<< HEAD
         font-size:100%;
         text-align: center;
         background:lightblue;
@@ -300,3 +349,10 @@ html,body{
       #clear{
           clear: both;
       }
+=======
+        
+        text-align: center;
+        background:lightblue;
+        padding: 5px;
+    }
+>>>>>>> 7317e7cf0071354c2743c3dc00a3d6f81417e930
